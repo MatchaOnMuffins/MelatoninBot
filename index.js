@@ -70,6 +70,27 @@ client.on('ready', () => {
 
 client.on('messageCreate', async function (message) {
     if (message.author.id === client.user.id) return;
+    // if bot is mentioned
+    if (message.content.includes(client.user.toString())) {
+        try {
+            await message.channel.send(`Hello ${message.author.toString()}`);
+            await message.react('👍');
+            await message.react('👎');
+            await message.react('🤔');
+            await message.channel.send("Type '!help' for help");
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    if (message.content === '!help') {
+        try {
+            await message.channel.send('```\n!help - shows this message\n!add - adds you to the list of users to be notified\n!remove - removes you from the list of users to be notified```');
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
     if (message.content === '!add') {
         // add user to database
         let guild_id = message.guild.id;
@@ -95,6 +116,7 @@ client.on('messageCreate', async function (message) {
             }
         })
     }
+
     if (message.content === '!remove') {
         // remove user from database
         let user_id = message.author.id;
