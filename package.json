@@ -1,0 +1,28 @@
+{
+  "name": "melatonin_bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "MatchaOnMuffins",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.2.0"
+
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "nodemon": "^2.0.19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatchaOnMuffins/MelatoninBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatchaOnMuffins/MelatoninBot/issues"
+  },
+  "description": "A discord bot that tells users to go to bed.",
+  "homepage": "https://github.com/MatchaOnMuffins/MelatoninBot#readme"
+}
