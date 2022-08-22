@@ -6,7 +6,7 @@ const client = new Client({intents: 3276799});
 
 function getCurrentTime() {
     let date = new Date();
-    return date.getHours();
+    return date.getUTCHours() - 4;
 }
 
 
