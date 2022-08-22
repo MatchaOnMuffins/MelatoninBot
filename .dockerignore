@@ -116,5 +116,3 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-auth/config.json
-auth/db.sqlite3
