@@ -32,7 +32,7 @@ async function mainLoop() {
             // do nothing
         } else {
             for (let user of rows) {
-                if (getCurrentTime() > 1 && getCurrentTime() < 7) {
+                if (getCurrentTime() > 0 && getCurrentTime() < 6) {
                     let status = "offline";
                     const guild = client.guilds.cache.get(user['guild_id']);
                     try {
